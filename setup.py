@@ -99,8 +99,8 @@ if platform.system() == 'Darwin':
         os.environ["CC"] = "/usr/local/opt/llvm/bin/clang"
         os.environ["LDFLAGS"] = "-L/usr/local/opt/llvm/lib"
         os.environ["CPPFLAGS"] = "-I/usr/local/opt/llvm/include"
-        extra_compile_args += ['-fopenmp']
-        extra_link_args += ['-fopenmp']
+extra_compile_args += ['-fopenmp']
+extra_link_args += ['-fopenmp']
 
 if cythonize is not None and numpy is not None:
     ext_modules = cythonize([
